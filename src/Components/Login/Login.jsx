@@ -24,7 +24,15 @@ const Login = () => {
         <div className="login-parent">
             <input type="text" placeholder="Username" ref={userNameRef} className="textBox"></input>
             <div className="errorText">{error && error.message ? error.message : null}</div>
+            <input type="password" placeholder="Password" className="textBox" style={{marginTop:10}}></input>            
             <button onClick={() => handleLogin()} className="button loginButton">Login</button>
+
+            <div className="noteBox">
+                <h4>For logging in use the following details </h4>
+                <h4>user access : user@test.com</h4>
+                <h4>admin access : admin@test.com</h4>
+                <h4>password is not required</h4>
+            </div>
         </div>
     );
 }
