@@ -1,9 +1,12 @@
 import React, { useRef, useContext, useState } from 'react';
 import { login } from '../../Authentication';
 import { AuthContext } from '../../Context/AuthContext';
+import { useHistory} from 'react-router-dom';
 
 const Login = () => {
+    let history = useHistory();
     const userNameRef = useRef(null);
+    // eslint-disable-next-line
     const [auth, setAuth] = useContext(AuthContext);
     const [error, setError] = useState(null);
     const handleLogin = () => {
@@ -11,7 +14,8 @@ const Login = () => {
         setAuth(result.authToken);
         if (!result.response.success) {
             setError({ message: result.response.message });
-        }else{
+        } else {
+            history.replace({ pathname: "/" });
             //resetting error 
             setError(null);
         }

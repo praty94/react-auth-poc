@@ -1,15 +1,22 @@
 .App {
-  text-align: center;
+  text-align: center;  
 }
 .header{
   padding:20px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   background-image: linear-gradient(to right, #051937, #0e3e65, #0f6893, #0896c1, #12c6eb);
-  align-items: center;
 }
 .headerText{
   color:#fff;  
+}
+.headerActions{
+ display:flex;
+ justify-content: flex-end;
+ align-items: center;
+}
+.appShell{
+  padding:20px;
 }
 
 .button{
@@ -45,4 +52,23 @@
 }
 .errorText{
   color:red;
+}
+
+.flex-container{
+  display:flex;  
+  justify-content: center;
+  align-items: center;
+  padding:50px;
+  flex-wrap: wrap;
+}
+.block{
+  height:150px;
+  width:300px;
+  margin:20px;
+  display:flex;  
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+  font-size:2rem;
+  font-weight: bold;
 }
